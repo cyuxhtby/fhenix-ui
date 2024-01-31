@@ -1,4 +1,5 @@
 import { ChainMap, ChainMetadata } from '@hyperlane-xyz/sdk';
+import { ProtocolType } from '@hyperlane-xyz/utils';
 
 // A map of chain names to ChainMetadata
 // Chains can be defined here, in chains.json, or in chains.yaml
@@ -28,4 +29,12 @@ export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
   //   },
   //   logoURI: '/logo.svg',
   // },
+  fhenixdevnet: {
+    name: 'fhenixdevnet',
+    chainId: 5432,
+    domainId: 5432,
+    protocol: ProtocolType.Ethereum,
+    rpcUrls: [{ http: 'https://fhenode.fhenix.io/new/evm' }],
+    logoURI: '/logos/fhenix.png',
+  },
 };
