@@ -70,7 +70,7 @@ export function MintTokenCard() {
 function TokenInput({ label, ...props }: { label: string } & FieldAttributes<any>) {
   return (
     <div className="flex-1">
-      <label htmlFor={props.name} className="block uppercase text-sm mb-1">
+      <label htmlFor={props.name} className="block uppercase text-sm mb-1 text-black">
         {label}
       </label>
       <TextField {...props} classes="w-full p-2 rounded bg-gray-700 border border-gray-600" />
@@ -81,7 +81,7 @@ function TokenInput({ label, ...props }: { label: string } & FieldAttributes<any
 function MaxButton() {
   // You should add the logic to handle the max button functionality
   return (
-    <button type="button" className="mt-8 ml-2 w-20 text-center text-sm">
+    <button type="button" className="mt-8 ml-2 w-20 text-center text-sm text-black">
       MAX
     </button>
   );

@@ -58,13 +58,17 @@ const securityHeaders = [
 ]
 
 const nextConfig = {
-  webpack(config) {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = { fs: false };
+    }
+  
     config.module.rules.push({
       test: /\.ya?ml$/,
       use: 'yaml-loader',
     });
     return config;
-  },
+  },  
 
   async headers() {
     return [
