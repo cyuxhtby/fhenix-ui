@@ -36,13 +36,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <EvmWalletContext>
         <SolanaWalletContext>
           <CosmosWalletContext>
-            <QueryClientProvider client={reactQueryClient}>
-              <AppLayout>
-                <Component {...pageProps} />
-                <Analytics />
-              </AppLayout>
-            </QueryClientProvider>
-            <ToastContainer transition={Zoom} position={toast.POSITION.BOTTOM_RIGHT} limit={2} />
+          <QueryClientProvider client={reactQueryClient}>
+            <AppLayout>
+              <Component {...pageProps} />
+              <Analytics />
+            </AppLayout>
+          </QueryClientProvider>
+          <ToastContainer transition={Zoom} position={toast.POSITION.BOTTOM_RIGHT} limit={2} />
           </CosmosWalletContext>
         </SolanaWalletContext>
       </EvmWalletContext>

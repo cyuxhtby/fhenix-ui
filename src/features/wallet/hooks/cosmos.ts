@@ -80,10 +80,10 @@ export function useCosmosTransactionFns(): ChainTransactionFns {
       let result: ExecuteResult | DeliverTxResponse;
       if (tx.type === 'cosmwasm') {
         const client = await getSigningCosmWasmClient();
-        result = await client.executeMultiple(chainContext.address, [tx.request], 'auto');
+        result = await client.executeMultiple(chainContext.address, [tx.request], 'auto') as any;
       } else if (tx.type === 'stargate') {
         const client = await getSigningStargateClient();
-        result = await client.signAndBroadcast(chainContext.address, [tx.request], 'auto');
+        result = await client.signAndBroadcast(chainContext.address, [tx.request], 'auto') as any;
       } else {
         throw new Error('Invalid cosmos tx type');
       }
