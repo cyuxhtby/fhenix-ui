@@ -9,15 +9,17 @@ export function Header() {
         <Link href="/" className="py-2 flex items-center space-x-4">
           <p className="text-lg font-bold">Home</p>
         </Link>
-        <Link href="/bridge" className="py-2 flex items-center space-x-4">
-          <p className="text-lg font-bold">Bridge</p>
-        </Link>
         <Link href="/mint" className="py-2 flex items-center space-x-4">
           <p className="text-lg font-bold">Mint</p>
         </Link>
+        <Link href="/bridge" className="py-2 flex items-center space-x-4">
+          <p className="text-lg font-bold">Bridge</p>
+        </Link>
+
+        {/*
         <Link href="/swap" className="py-2 flex items-center space-x-4">
           <p className="text-lg font-bold">Swap</p>
-        </Link>
+        </Link> */}
         <div className="flex flex-col items-end md:flex-row-reverse md:items-center gap-4">
           <WalletControlBar />
         </div>

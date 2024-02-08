@@ -67,6 +67,15 @@ const nextConfig = {
       test: /\.ya?ml$/,
       use: 'yaml-loader',
     });
+
+    config.module.rules.push({
+      test: /\.+(js|jsx|ts|tsx)$/,
+      include: [
+        /node_modules[\\/]@uniswap[\\/](widgets|conedison)[\\/]/,
+      ],
+      use: 'babel-loader',
+    });
+
     return config;
   },  
 
